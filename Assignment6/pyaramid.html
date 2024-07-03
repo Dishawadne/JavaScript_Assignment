@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    const buildPyramid = (num) => {
+        let pyramid = '';
+        for (let i = 1; i <= num; i++) {
+            // Add leading spaces
+            for (let j = 0; j < num - i; j++) {
+                pyramid += ' ';
+            }
+            // Add stars and spaces between them
+            for (let k = 0; k < i; k++) {
+                pyramid += '*';
+                if (k < i - 1) {
+                    pyramid += ' ';
+                }
+            }
+            // Add a new line after each row except the last one
+            if (i < num) {
+                pyramid += '\n';
+            }
+        }
+        return pyramid;
+    };
+    
+    console.log(buildPyramid(6));
+    
+   
+    </script>
+</body>
+</html>
